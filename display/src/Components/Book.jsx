@@ -10,7 +10,7 @@ const Book = () => {
         <>
             {Booklist.map((book, i) => {
                 return (
-                    <Card>
+                    <Card key={i}>
                         <Card.Body>
                             <Card.Title><h1>{Booklist[i].Title}</h1></Card.Title>
                             <Card.Text>{Booklist[i].Author}</Card.Text>

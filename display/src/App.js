@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Bookform setCard={setCard} />
+        <Bookform card={card} setCard={setCard} />
       </header>
       <Book card={card}/>
     </div>

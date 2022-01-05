@@ -1,20 +1,15 @@
 import {createSlice} from '@reduxjs/toolkit';
 import Booklist from '../Components/Booklist';
 
-let booklist = []
-
-let storedBooklist = JSON.parse(localStorage.getItem('storedBooklist'));
-storedBooklist ? booklist = storedBooklist : booklist = Booklist
-
 export const booklistSlice = createSlice({
     name: 'booklist',
     initialState: {
-        booklist: booklist
+        booklist: Booklist
     },
     reducers: {
         addBooks: (state, action) => {
-            state.booklist = action.payload
-            localStorage.setItem('storedBooklist', JSON.stringify(state.booklist));
+            state.booklist.push({...action.payload})
+            console.log(state.booklist)
         },
     }
 })
