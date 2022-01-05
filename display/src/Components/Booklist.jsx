@@ -1,10 +1,9 @@
-// import Book from './Book';
-// import React from 'react'
+const Booklist = [
+    {
+        Title: 'To Kill A Mockingbird',
+        Author: 'Harper Lee',
+        Synopsis: 'Boo, Scout, and Gregory play in a treehouse',
+    }
+]
 
-// const Booklist = () => {
-//     return (
-        
-//     )
-// }
-
-// export default Booklist
+export default Booklist;

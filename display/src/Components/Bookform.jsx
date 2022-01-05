@@ -1,10 +1,14 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
+import Booklist from './Book';
 
-const Bookform = ({setCard}) => {
+const Bookform = ({card, setCard}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setCard({ Title: e.target.title.value, Author: e.target.author.value, Synopsis: e.target.synopsis.value })
+        const updateBooklist = [
+            ...Booklist, card
+        ]
     }
 
     return (
